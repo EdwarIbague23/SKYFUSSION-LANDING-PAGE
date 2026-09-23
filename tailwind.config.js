@@ -19,20 +19,44 @@ export default {
           200: '#e2e8f0',
           100: '#f1f5f9',
           50: '#f8fafc',
+        },
+        accent: {
+          cyan: '#22d3ee',
+          blue: '#3b82f6',
+          violet: '#8b5cf6',
         }
+      },
+      fontFamily: {
+        display: ['"Space Grotesk"', 'sans-serif'],
+        body: ['Inter', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fade-in 1s ease-out',
         'bounce': 'bounce 1s infinite',
         'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite',
+        'marquee': 'marquee 25s linear infinite',
       },
       keyframes: {
         'fade-in': {
           '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'glow': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+        'marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         }
       }
     },
+    plugins: [],
   },
-  plugins: [],
 }
